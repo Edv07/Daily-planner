@@ -1,6 +1,19 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+
+
+// Get the current date and time using Day.js
+var currentDate = dayjs();
+
+// Display the current date and time on the page
+var formattedDate = currentDate.format("dddd, MMMM D, YYYY");
+var formattedTime = currentDate.format("h:mm A");
+document.getElementById("currentDay").textContent = formattedDate + " " + formattedTime;
+
+
+
+
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
